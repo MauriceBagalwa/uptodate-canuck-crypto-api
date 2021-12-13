@@ -100,12 +100,7 @@ module.exports.changeNumberPhone = async (req, res, next) => {
 //             status: 409,
 //             message: "Email/password incorrect",
 //           });
-//         // }
-//       }
-//     });
-//   },
 
-//     // console.log(req.body);
 //
 //   },
 
