@@ -129,8 +129,7 @@ module.exports.changeNumberPhone = async (req, res, next) => {
 //             message: "Invalid code.",
 //           });
 //         else res.json({ status: 200, user });
-//       }
-//     );
+
 //   },
 //   update: async (req, res, next) => {
 //     const filter = {
