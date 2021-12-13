@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "test": "echo\"Error: mo test specified\"&& exit 1"
   },
   "dependencies": {
     "axios": "^0.24.0",
