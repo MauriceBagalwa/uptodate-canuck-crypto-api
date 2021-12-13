@@ -29,6 +29,36 @@ module.exports.save = async (req, res, next) => {
     next(err);
   }
 };
+module.exports.changeNumberPhone = async (req, res, next) => {
+  try {
+    const { _id, phone } = req.body;
+    const value = {
+      phone,
+      codeValidation: codevalidation(6),
+    };
+
+    model.findByIdAndUpdate(
+      { _id },
+      value,
+      { new: true },
+      function (err, find) {
+        if (err) next(err);
+        if (!find)
+          res.status(409).json({
+            doc: "Aucun utilisateur trouver.",
+          });
+        else
+          res.status(200).json({
+            status: 200,
+            find,
+          });
+        //send code
+      }
+    );
+  } catch (err) {
+    next(err);
+  }
+};
 
 // module.exports = {
 //   // users: (req, res, next) => {
@@ -85,32 +115,9 @@ module.exports.save = async (req, res, next) => {
 //       }
 //     });
 //   },
-//   changeNumberPhone: async (req, res, next) => {
-//     const { _id, phone } = req.body;
-//     const value = {
-//       phone,
-//       codeValidation: codevalidation(6),
-//     };
 
 //     // console.log(req.body);
-//     model.findByIdAndUpdate(
-//       { _id },
-//       value,
-//       { new: true },
-//       function (err, find) {
-//         if (err) next(err);
-//         if (!find)
-//           res.status(409).json({
-//             doc: "Aucun utilisateur trouver.",
-//           });
-//         else
-//           res.status(200).json({
-//             status: 200,
-//             find,
-//           });
-//         //send code
-//       }
-//     );
+//
 //   },
 
 //   resendCode: async (req, res, next) => {

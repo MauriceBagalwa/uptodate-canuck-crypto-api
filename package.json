@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start":"nodemon app.js"
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -14,7 +14,6 @@
     "mongodb": "^4.2.0",
     "mongoose": "^6.0.13",
     "nodemailer": "^6.7.1",
-    "nodemon": "^2.0.15",
     "qs": "^6.10.1"
   },
   "name": "uptodate-canuck-crypto-api",
@@ -22,5 +21,8 @@
   "description": "\"api de l'application canuck crypto aui est une application de transfert d'argent\"",
   "main": "app.js",
   "author": "Maurice Bagalwa <mauricebagalwa009@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
