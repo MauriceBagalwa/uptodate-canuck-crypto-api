@@ -61,17 +61,6 @@ module.exports.changeNumberPhone = async (req, res, next) => {
 };
 
 // module.exports = {
-//   // users: (req, res, next) => {
-//   //   model
-//   //     .find(function (err, doc) {
-//   //       if (err) next(err);
-//   //       res.send({
-//   //         status: 200,
-//   //         doc,
-//   //       });
-//   //     })
-//   //     .sort({ _id: -1 });
-//   // },
 //   signin: async (req, res, next) => {
 //     const { email, password } = req.body;
 //     console.log(req.body);
